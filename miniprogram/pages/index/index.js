@@ -1,36 +1,39 @@
-const { envList } = require("../../envList");
-const { QuickStartPoints, QuickStartSteps } = require("./constants");
-
+//Page Object
 Page({
   data: {
-    knowledgePoints: QuickStartPoints,
-    steps: QuickStartSteps,
+    
   },
+  //options(Object)
+  onLoad: function(options) {
+    
+  },
+  onReady: function() {
+    
+  },
+  onShow: function() {
+    
+  },
+  onHide: function() {
 
-  copyCode(e) {
-    const code = e.target?.dataset?.code || '';
-    wx.setClipboardData({
-      data: code,
-      success: () => {
-        wx.showToast({
-          title: '已复制',
-        })
-      },
-      fail: (err) => {
-        console.error('复制失败-----', err);
-      }
-    })
   },
+  onUnload: function() {
 
-  discoverCloud() {
-    wx.switchTab({
-      url: '/pages/examples/index',
-    })
   },
+  onPullDownRefresh: function() {
 
-  gotoGoodsListPage() {
-    wx.navigateTo({
-      url: '/pages/goods-list/index',
-    })
   },
+  onReachBottom: function() {
+
+  },
+  onShareAppMessage: function() {
+
+  },
+  onPageScroll: function() {
+
+  },
+  //item(index,pagePath,text)
+  onTabItemTap:function(item) {
+
+  }
 });
+  
