@@ -1,0 +1,108 @@
+/* pages/user-center/index.wxss */
+.user-center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f6f6f6;
+}
+
+/* 用户信息区域样式 */
+.user-info-container {
+  padding: 30rpx;
+  background-color: #ffffff;
+  margin-bottom: 20rpx;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  overflow: hidden;
+  margin-right: 30rpx;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.edit-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.user-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nickname-container {
+  margin-bottom: 10rpx;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.user-id {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.get-user-info {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: #07C160;
+  font-size: 32rpx;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.get-user-info::after {
+  border: none;
+}
+
+/* 功能列表样式 */
+.function-list {
+  background-color: #ffffff;
+}
+
+.function-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.function-title {
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.function-arrow {
+  font-size: 28rpx;
+  color: #cccccc;
+} 
