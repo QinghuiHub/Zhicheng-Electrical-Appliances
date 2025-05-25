@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="header">
+    <view class="title">预约维修</view>
+    <view class="subtitle">快速报修，专业服务</view>
+  </view>
+  
+  <view class="form-container">
+    <view class="form-item">
+      <view class="label">设备类型</view>
+      <picker mode="selector" range="{{deviceTypes}}" bindchange="onDeviceTypeChange">
+        <view class="picker-value">{{deviceType || '请选择设备类型'}}</view>
+      </picker>
+    </view>
+    
+    <view class="form-item">
+      <view class="label">故障描述</view>
+      <textarea class="textarea" placeholder="请详细描述您遇到的问题..." bindinput="onFaultDescInput"></textarea>
+    </view>
+    
+    <view class="form-item">
+      <view class="label">联系方式</view>
+      <input class="input" type="number" placeholder="请输入您的手机号码" bindinput="onContactInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="label">地址</view>
+      <input class="input" placeholder="请输入您的详细地址" bindinput="onAddressInput" />
+    </view>
+  </view>
+  
+  <view class="upload-container">
+    <view class="upload-title">上传图片（可选）</view>
+    <view class="upload-content">
+      <view class="upload-item" bindtap="chooseImage" wx:if="{{images.length < 3}}">
+        <view class="upload-add">+</view>
+      </view>
+      <view class="upload-item image-item" wx:for="{{images}}" wx:key="index">
+        <image src="{{item}}" mode="aspectFill"></image>
+        <view class="delete-btn" catchtap="deleteImage" data-index="{{index}}">×</view>
+      </view>
+    </view>
+  </view>
+  
+  <button class="submit-btn" bindtap="submitFault">提交报修</button>
+</view> 

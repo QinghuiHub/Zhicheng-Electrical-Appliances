@@ -35,4 +35,37 @@
             </view>
         </swiper-item>
     </swiper>
+    
+    <view class="maintenance-section">
+        <view class="section-title">预约服务</view>
+        <view class="maintenance-grid">
+            <view class="maintenance-item" bindtap="navigateToMaintenance" data-type="fault">
+                <view class="maintenance-icon fault-icon">
+                    <image src="../../images/maintenance/wrench.png" mode="aspectFit"></image>
+                </view>
+                <view class="maintenance-text">预约维修</view>
+            </view>
+            
+            <view class="maintenance-item" bindtap="navigateToMaintenance" data-type="workorder">
+                <view class="maintenance-icon workorder-icon">
+                    <image src="../../images/maintenance/document.png" mode="aspectFit"></image>
+                </view>
+                <view class="maintenance-text">预约安装</view>
+            </view>
+            
+            <view class="maintenance-item" bindtap="navigateToMaintenance" data-type="inventory">
+                <view class="maintenance-icon inventory-icon">
+                    <image src="../../images/maintenance/box.png" mode="aspectFit"></image>
+                </view>
+                <view class="maintenance-text">保养换芯</view>
+            </view>
+            
+            <view class="maintenance-item" bindtap="navigateToMaintenance" data-type="statistics">
+                <view class="maintenance-icon statistics-icon">
+                    <image src="../../images/maintenance/chart.png" mode="aspectFit"></image>
+                </view>
+                <view class="maintenance-text">旧机回收</view>
+            </view>
+        </view>
+    </view>
 </view>

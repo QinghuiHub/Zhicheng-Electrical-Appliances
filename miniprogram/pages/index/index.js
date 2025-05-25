@@ -63,6 +63,31 @@ Page({
       title: '图片加载失败',
       icon: 'none'
     });
+  },
+  navigateToMaintenance(e) {
+    const type = e.currentTarget.dataset.type;
+    let url = '';
+    
+    switch(type) {
+      case 'fault':
+        url = '/pages/maintenance/fault/index';
+        break;
+      case 'workorder':
+        url = '/pages/maintenance/workorder/index';
+        break;
+      case 'inventory':
+        url = '/pages/maintenance/inventory/index';
+        break;
+      case 'statistics':
+        url = '/pages/maintenance/statistics/index';
+        break;
+      default:
+        return;
+    }
+
+    wx.navigateTo({
+      url: url
+    });
   }
 });
   

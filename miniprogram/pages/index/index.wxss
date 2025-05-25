@@ -46,3 +46,133 @@
   transform: scale(1);
   box-shadow: 0 6rpx 12rpx rgba(0, 0, 0, 0.18);
 }
+
+.maintenance-section {
+  width: 100%;
+  margin: 30rpx 0;
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #4568DC;
+  padding: 10rpx 0 20rpx 10rpx;
+  border-left: 8rpx solid #4568DC;
+  margin-bottom: 20rpx;
+}
+
+.maintenance-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.maintenance-item {
+  width: 48%;
+  background-color: #f8f9fc;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.maintenance-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15rpx;
+}
+
+.maintenance-icon image {
+  width: 60%;
+  height: 60%;
+}
+
+.fault-icon {
+  background-color: #EFF6FF;
+}
+
+.workorder-icon {
+  background-color: #F5F3FF;
+}
+
+.inventory-icon {
+  background-color: #ECFDF5;
+}
+
+.statistics-icon {
+  background-color: #FEF3F2;
+}
+
+.maintenance-text {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 功能导航样式 */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30rpx 20rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  margin-top: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120rpx;
+}
+
+.nav-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+  background-size: 50rpx 50rpx;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service-icon {
+  background-color: #e8f5e9;
+  background-image: url('https://img.icons8.com/ios/100/000000/maintenance.png');
+}
+
+.beauty-icon {
+  background-color: #fff3e0;
+  background-image: url('https://img.icons8.com/ios/100/000000/cosmetics.png');
+}
+
+.store-icon {
+  background-color: #e3f2fd;
+  background-image: url('https://img.icons8.com/ios/100/000000/shop.png');
+}
+
+.mall-icon {
+  background-color: #f3e5f5;
+  background-image: url('https://img.icons8.com/ios/100/000000/shopping-bag.png');
+}
+
+.profile-icon {
+  background-color: #e0f7fa;
+  background-image: url('https://img.icons8.com/ios/100/000000/user.png');
+}
+
+.nav-text {
+  font-size: 24rpx;
+  color: #333;
+}
