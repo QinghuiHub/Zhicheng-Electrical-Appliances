@@ -2,7 +2,7 @@ Page({
   data: {
     deviceTypes: ['空调', '冰箱', '洗衣机', '热水器', '电视', '其他'],
     deviceType: '',
-    faultDesc: '',
+    // faultDesc: '',
     contact: '',
     address: '',
     images: []
@@ -21,11 +21,11 @@ Page({
   },
 
   // 故障描述输入
-  onFaultDescInput(e) {
-    this.setData({
-      faultDesc: e.detail.value
-    });
-  },
+  // onFaultDescInput(e) {
+  //   this.setData({
+  //     faultDesc: e.detail.value
+  //   });
+  // },
 
   // 联系方式输入
   onContactInput(e) {
@@ -69,17 +69,18 @@ Page({
 
   // 提交报修
   submitFault() {
-    const { deviceType, faultDesc, contact, address } = this.data;
+    // const { deviceType, faultDesc, contact, address } = this.data;
+    const { deviceType, contact, address } = this.data;
     
     if (!deviceType) {
       this.showToast('请选择设备类型');
       return;
     }
     
-    if (!faultDesc) {
-      this.showToast('请输入故障描述');
-      return;
-    }
+    // if (!faultDesc) {
+    //   this.showToast('请输入故障描述');
+    //   return;
+    // }
     
     if (!contact) {
       this.showToast('请输入联系方式');

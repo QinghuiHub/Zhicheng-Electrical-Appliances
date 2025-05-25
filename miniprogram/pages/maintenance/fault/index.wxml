@@ -12,10 +12,10 @@
       </picker>
     </view>
     
-    <view class="form-item">
+    <!-- <view class="form-item">
       <view class="label">故障描述</view>
       <textarea class="textarea" placeholder="请详细描述您遇到的问题..." bindinput="onFaultDescInput"></textarea>
-    </view>
+    </view> -->
     
     <view class="form-item">
       <view class="label">联系方式</view>
