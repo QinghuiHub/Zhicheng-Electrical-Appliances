@@ -1,6 +1,6 @@
 <!--志成电器-->
 <view class="container">
-    <view class="title">志成电器</view>
+    <!--<view class="title">志成电器</view>-->
     
     <swiper 
         class="swiper" 
