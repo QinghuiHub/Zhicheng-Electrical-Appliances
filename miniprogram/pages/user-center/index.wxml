@@ -4,7 +4,7 @@
   <view class="user-info-container">
     <view class="user-info">
       <view class="avatar-container" bindtap="chooseAvatar">
-        <image class="avatar" src="{{userInfo.avatarUrl || '/images/avatar.png'}}"></image>
+        <image class="avatar" src="{{userInfo.avatarUrl || '../../../images/avatar.png'}}"></image>
         <view class="edit-icon">
           <text>✏️</text>
         </view>
