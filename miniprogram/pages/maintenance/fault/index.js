@@ -2,7 +2,8 @@ Page({
   data: {
     deviceTypes: ['空调', '冰箱', '洗衣机', '热水器', '电视', '其他'],
     deviceType: '',
-    // faultDesc: '',
+    faultDesc: '',
+    name: '',
     contact: '',
     address: '',
     images: []
@@ -21,13 +22,20 @@ Page({
   },
 
   // 故障描述输入
-  // onFaultDescInput(e) {
-  //   this.setData({
-  //     faultDesc: e.detail.value
-  //   });
-  // },
+  onFaultDescInput(e) {
+    this.setData({
+      faultDesc: e.detail.value
+    });
+  },
+  
+  // 联系人姓名输入
+  onNameInput(e) {
+    this.setData({
+      name: e.detail.value
+    });
+  },
 
-  // 联系方式输入
+  // 手机号码输入
   onContactInput(e) {
     this.setData({
       contact: e.detail.value
@@ -69,26 +77,30 @@ Page({
 
   // 提交报修
   submitFault() {
-    // const { deviceType, faultDesc, contact, address } = this.data;
-    const { deviceType, contact, address } = this.data;
+    const { deviceType, name, contact, address } = this.data;
     
     if (!deviceType) {
       this.showToast('请选择设备类型');
       return;
     }
     
-    // if (!faultDesc) {
-    //   this.showToast('请输入故障描述');
-    //   return;
-    // }
+    if (!name) {
+      this.showToast('请输入联系人姓名');
+      return;
+    }
     
     if (!contact) {
-      this.showToast('请输入联系方式');
+      this.showToast('请输入手机号码');
+      return;
+    }
+    
+    if (!/^1\d{10}$/.test(contact)) {
+      this.showToast('手机号码格式不正确');
       return;
     }
     
     if (!address) {
-      this.showToast('请输入地址');
+      this.showToast('请输入服务地址');
       return;
     }
     
@@ -101,14 +113,14 @@ Page({
     setTimeout(() => {
       wx.hideLoading();
       wx.showToast({
-        title: '提交成功',
+        title: '预约成功',
         icon: 'success',
         duration: 2000,
         success: () => {
           // 提交成功后跳转回首页
           setTimeout(() => {
-            wx.navigateBack({
-              delta: 1
+            wx.switchTab({
+              url: '/pages/index/index'
             });
           }, 2000);
         }

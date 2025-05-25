@@ -5,7 +5,14 @@ Page({
       "cloud://cloud1-9guuoeyie2fd8916.636c-cloud1-9guuoeyie2fd8916-1360998817/237879f1f43163117b1dc780f7a4f4eb35da00f7_size510_w1080_h608.jfif"
     ],
     imagesLoaded: [false, false],
-    currentSwiperIndex: 0
+    currentSwiperIndex: 0,
+    phoneNumber: '13330130661', // 客服电话
+    location: {
+      latitude: 30.27415,
+      longitude: 120.15515,
+      name: '志成电器总店',
+      address: '浙江省杭州市西湖区文三路XXX号'
+    }
   },
   onLoad: function(options) {
     if (!wx.cloud) {
@@ -35,7 +42,10 @@ Page({
 
   },
   onShareAppMessage: function() {
-
+    return {
+      title: '志成电器 - 专业家电维修安装服务',
+      path: '/pages/index/index'
+    };
   },
   onPageScroll: function() {
 
@@ -87,6 +97,41 @@ Page({
 
     wx.navigateTo({
       url: url
+    });
+  },
+  makePhoneCall() {
+    wx.makePhoneCall({
+      phoneNumber: this.data.phoneNumber,
+      success: () => {
+        console.log('拨打电话成功');
+      },
+      fail: (err) => {
+        console.error('拨打电话失败', err);
+        wx.showToast({
+          title: '拨打电话失败',
+          icon: 'none'
+        });
+      }
+    });
+  },
+  openLocation() {
+    const { latitude, longitude, name, address } = this.data.location;
+    wx.openLocation({
+      latitude,
+      longitude,
+      name,
+      address,
+      scale: 18,
+      success: () => {
+        console.log('打开位置成功');
+      },
+      fail: (err) => {
+        console.error('打开位置失败', err);
+        wx.showToast({
+          title: '打开位置失败',
+          icon: 'none'
+        });
+      }
     });
   }
 });

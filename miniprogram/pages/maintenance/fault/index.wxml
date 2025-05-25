@@ -1,45 +1,69 @@
 <view class="container">
   <view class="header">
     <view class="title">预约维修</view>
-    <view class="subtitle">快速报修，专业服务</view>
+    <view class="subtitle">专业师傅，快速上门</view>
   </view>
   
   <view class="form-container">
-    <view class="form-item">
-      <view class="label">设备类型</view>
-      <picker mode="selector" range="{{deviceTypes}}" bindchange="onDeviceTypeChange">
-        <view class="picker-value">{{deviceType || '请选择设备类型'}}</view>
-      </picker>
+    <view class="form-group">
+      <view class="form-title">基本信息</view>
+      
+      <view class="form-item">
+        <view class="label required">设备类型</view>
+        <picker mode="selector" range="{{deviceTypes}}" bindchange="onDeviceTypeChange">
+          <view class="picker-value">{{deviceType || '请选择设备类型'}}</view>
+        </picker>
+      </view>
+      
+      <view class="form-item">
+        <view class="label">故障描述</view>
+        <textarea class="textarea" placeholder="请简要描述故障现象，方便师傅提前了解情况..." bindinput="onFaultDescInput" maxlength="200"></textarea>
+      </view>
     </view>
     
-    <!-- <view class="form-item">
-      <view class="label">故障描述</view>
-      <textarea class="textarea" placeholder="请详细描述您遇到的问题..." bindinput="onFaultDescInput"></textarea>
-    </view> -->
-    
-    <view class="form-item">
-      <view class="label">联系方式</view>
-      <input class="input" type="number" placeholder="请输入您的手机号码" bindinput="onContactInput" />
+    <view class="form-group">
+      <view class="form-title">联系方式</view>
+      
+      <view class="form-item">
+        <view class="label required">联系人</view>
+        <input class="input" placeholder="请输入您的姓名" bindinput="onNameInput" />
+      </view>
+      
+      <view class="form-item">
+        <view class="label required">手机号码</view>
+        <input class="input" type="number" placeholder="请输入您的手机号码" bindinput="onContactInput" />
+      </view>
+      
+      <view class="form-item">
+        <view class="label required">服务地址</view>
+        <input class="input" placeholder="请输入您的详细地址" bindinput="onAddressInput" />
+      </view>
     </view>
     
-    <view class="form-item">
-      <view class="label">地址</view>
-      <input class="input" placeholder="请输入您的详细地址" bindinput="onAddressInput" />
+    <view class="form-group">
+      <view class="form-title">上传图片 <text class="subtitle">(可选，最多3张)</text></view>
+      <view class="upload-content">
+        <view class="upload-tips">上传故障部位照片，有助于技师更快诊断问题</view>
+        <view class="upload-grid">
+          <view class="upload-item" bindtap="chooseImage" wx:if="{{images.length < 3}}">
+            <view class="upload-add">+</view>
+            <view class="upload-text">添加照片</view>
+          </view>
+          <view class="upload-item image-item" wx:for="{{images}}" wx:key="index">
+            <image src="{{item}}" mode="aspectFill"></image>
+            <view class="delete-btn" catchtap="deleteImage" data-index="{{index}}">×</view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
   
-  <view class="upload-container">
-    <view class="upload-title">上传图片（可选）</view>
-    <view class="upload-content">
-      <view class="upload-item" bindtap="chooseImage" wx:if="{{images.length < 3}}">
-        <view class="upload-add">+</view>
-      </view>
-      <view class="upload-item image-item" wx:for="{{images}}" wx:key="index">
-        <image src="{{item}}" mode="aspectFill"></image>
-        <view class="delete-btn" catchtap="deleteImage" data-index="{{index}}">×</view>
-      </view>
-    </view>
+  <view class="service-note">
+    <view class="note-title">服务说明</view>
+    <view class="note-item">1. 提交信息后，客服将在30分钟内与您联系</view>
+    <view class="note-item">2. 上门检测费用为30元，若维修则检测费用将抵扣维修费</view>
+    <view class="note-item">3. 维修服务质保期为90天</view>
   </view>
   
-  <button class="submit-btn" bindtap="submitFault">提交报修</button>
+  <button class="submit-btn" bindtap="submitFault">立即预约</button>
 </view> 

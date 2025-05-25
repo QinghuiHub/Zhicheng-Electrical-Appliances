@@ -1,6 +1,12 @@
-<!--志成电器-->
+<!--志成电器首页-->
 <view class="container">
-    <!--<view class="title">志成电器</view>-->
+    <view class="header-section">
+        <view class="logo-area">
+            <image class="logo-image" src="../../images/logo.png" mode="aspectFit"></image>
+            <!-- <view class="company-name">志成电器</view> -->
+        </view>
+        <view class="slogan">专业维修，品质服务</view>
+    </view>
     
     <swiper 
         class="swiper" 
@@ -36,35 +42,111 @@
         </swiper-item>
     </swiper>
     
-    <view class="maintenance-section">
-        <view class="section-title">预约服务</view>
-        <view class="maintenance-grid">
-            <view class="maintenance-item" bindtap="navigateToMaintenance" data-type="fault">
-                <view class="maintenance-icon fault-icon">
-                    <image src="../../images/maintenance/wrench.png" mode="aspectFit"></image>
+    <view class="quick-contact">
+        <view class="contact-item" bindtap="makePhoneCall">
+            <view class="contact-icon phone-icon">
+                <image src="../../images/maintenance/phone.png" mode="aspectFit"></image>
+            </view>
+            <view class="contact-text">一键拨号</view>
+        </view>
+        <view class="contact-item" bindtap="openLocation">
+            <view class="contact-icon location-icon">
+                <image src="../../images/maintenance/location.png" mode="aspectFit"></image>
+            </view>
+            <view class="contact-text">查看门店</view>
+        </view>
+    </view>
+    
+    <view class="service-section">
+        <view class="section-title">服务项目</view>
+        <view class="service-grid">
+            <view class="service-item" bindtap="navigateToMaintenance" data-type="fault">
+                <view class="service-icon repair-icon">
+                    <image src="../../images/maintenance/repair.png" mode="aspectFit"></image>
                 </view>
-                <view class="maintenance-text">预约维修</view>
+                <view class="service-text">预约维修</view>
+                <view class="service-desc">专业技师上门维修</view>
             </view>
             
-            <view class="maintenance-item" bindtap="navigateToMaintenance" data-type="workorder">
-                <view class="maintenance-icon workorder-icon">
-                    <image src="../../images/maintenance/document.png" mode="aspectFit"></image>
+            <view class="service-item" bindtap="navigateToMaintenance" data-type="workorder">
+                <view class="service-icon install-icon">
+                    <image src="../../images/maintenance/install.png" mode="aspectFit"></image>
                 </view>
-                <view class="maintenance-text">预约安装</view>
+                <view class="service-text">预约安装</view>
+                <view class="service-desc">专业安装各类家电</view>
             </view>
             
-            <view class="maintenance-item" bindtap="navigateToMaintenance" data-type="inventory">
-                <view class="maintenance-icon inventory-icon">
-                    <image src="../../images/maintenance/box.png" mode="aspectFit"></image>
+            <view class="service-item" bindtap="navigateToMaintenance" data-type="inventory">
+                <view class="service-icon maintain-icon">
+                    <image src="../../images/maintenance/maintain.png" mode="aspectFit"></image>
                 </view>
-                <view class="maintenance-text">保养换芯</view>
+                <view class="service-text">保养换芯</view>
+                <view class="service-desc">定期保养延长寿命</view>
             </view>
             
-            <view class="maintenance-item" bindtap="navigateToMaintenance" data-type="statistics">
-                <view class="maintenance-icon statistics-icon">
-                    <image src="../../images/maintenance/chart.png" mode="aspectFit"></image>
+            <view class="service-item" bindtap="navigateToMaintenance" data-type="statistics">
+                <view class="service-icon recycle-icon">
+                    <image src="../../images/maintenance/recycle.png" mode="aspectFit"></image>
                 </view>
-                <view class="maintenance-text">旧机回收</view>
+                <view class="service-text">旧机回收</view>
+                <view class="service-desc">环保回收旧电器</view>
+            </view>
+        </view>
+    </view>
+    
+    <view class="advantage-section">
+        <view class="section-title">我们的优势</view>
+        <view class="advantage-list">
+            <view class="advantage-item">
+                <view class="advantage-icon">
+                    <image src="../../images/maintenance/quality.png" mode="aspectFit"></image>
+                </view>
+                <view class="advantage-content">
+                    <view class="advantage-title">专业品质</view>
+                    <view class="advantage-desc">拥有专业维修团队和设备</view>
+                </view>
+            </view>
+            <view class="advantage-item">
+                <view class="advantage-icon">
+                    <image src="../../images/maintenance/speed.png" mode="aspectFit"></image>
+                </view>
+                <view class="advantage-content">
+                    <view class="advantage-title">快速响应</view>
+                    <view class="advantage-desc">24小时内上门服务</view>
+                </view>
+            </view>
+            <view class="advantage-item">
+                <view class="advantage-icon">
+                    <image src="../../images/maintenance/warranty.png" mode="aspectFit"></image>
+                </view>
+                <view class="advantage-content">
+                    <view class="advantage-title">服务保障</view>
+                    <view class="advantage-desc">维修服务质保90天</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+    <view class="brand-section">
+        <view class="section-title">支持品牌</view>
+        <view class="brand-list">
+            <view class="brand-item">
+                <image src="../../images/maintenance/brand1.png" mode="aspectFit"></image>
+            </view>
+            <view class="brand-item">
+                <image src="../../images/maintenance/brand2.png" mode="aspectFit"></image>
+            </view>
+            <view class="brand-item">
+                <image src="../../images/maintenance/brand3.png" mode="aspectFit"></image>
+            </view>
+            <view class="brand-item">
+                <image src="../../images/maintenance/brand4.png" mode="aspectFit"></image>
+            </view>
+            <view class="brand-item">
+                <image src="../../images/maintenance/brand5.png" mode="aspectFit"></image>
+            </view>
+            <view class="brand-item">
+                <image src="../../images/maintenance/brand6.png" mode="aspectFit"></image>
             </view>
         </view>
     </view>
