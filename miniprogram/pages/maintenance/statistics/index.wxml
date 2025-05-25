@@ -1,0 +1,68 @@
+<!--pages/maintenance/statistics/index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="title">旧机回收</view>
+    <view class="subtitle">环保回收，价值重现</view>
+  </view>
+  
+  <view class="form-container">
+    <view class="form-item">
+      <view class="label">设备类型</view>
+      <picker mode="selector" range="{{deviceTypes}}" bindchange="onDeviceTypeChange">
+        <view class="picker-value">{{deviceType || '请选择设备类型'}}</view>
+      </picker>
+    </view>
+    
+    <view class="form-item">
+      <view class="label">产品品牌</view>
+      <input class="input" placeholder="请输入产品品牌" bindinput="onBrandInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="label">使用年限</view>
+      <picker mode="selector" range="{{yearOptions}}" bindchange="onYearChange">
+        <view class="picker-value">{{useYear || '请选择使用年限'}}</view>
+      </picker>
+    </view>
+    
+    <view class="form-item">
+      <view class="label">设备状态</view>
+      <radio-group class="radio-group" bindchange="onStatusChange">
+        <label class="radio-item" wx:for="{{statusOptions}}" wx:key="index">
+          <radio value="{{item}}" checked="{{status === item}}" />
+          <text>{{item}}</text>
+        </label>
+      </radio-group>
+    </view>
+    
+    <view class="form-item">
+      <view class="label">联系方式</view>
+      <input class="input" type="number" placeholder="请输入您的手机号码" bindinput="onContactInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="label">地址</view>
+      <input class="input" placeholder="请输入您的详细地址" bindinput="onAddressInput" />
+    </view>
+  </view>
+  
+  <view class="upload-container">
+    <view class="upload-title">上传设备照片</view>
+    <view class="upload-content">
+      <view class="upload-item" bindtap="chooseImage" wx:if="{{images.length < 3}}">
+        <view class="upload-add">+</view>
+      </view>
+      <view class="upload-item image-item" wx:for="{{images}}" wx:key="index">
+        <image src="{{item}}" mode="aspectFill"></image>
+        <view class="delete-btn" catchtap="deleteImage" data-index="{{index}}">×</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="remarks-container">
+    <view class="label">备注信息（可选）</view>
+    <textarea class="textarea" placeholder="请输入其他需要说明的信息" bindinput="onRemarksInput"></textarea>
+  </view>
+  
+  <button class="submit-btn" bindtap="submitRecycle">提交申请</button>
+</view>

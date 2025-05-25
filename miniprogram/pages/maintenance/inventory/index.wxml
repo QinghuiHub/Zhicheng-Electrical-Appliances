@@ -1,0 +1,55 @@
+<!--pages/maintenance/inventory/index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="title">保养换芯</view>
+    <view class="subtitle">专业保养，延长寿命</view>
+  </view>
+  
+  <view class="form-container">
+    <view class="form-item">
+      <view class="label">设备类型</view>
+      <picker mode="selector" range="{{deviceTypes}}" bindchange="onDeviceTypeChange">
+        <view class="picker-value">{{deviceType || '请选择设备类型'}}</view>
+      </picker>
+    </view>
+    
+    <view class="form-item">
+      <view class="label">产品型号</view>
+      <input class="input" placeholder="请输入产品型号" bindinput="onModelInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="label">保养项目</view>
+      <checkbox-group bindchange="onServiceChange">
+        <view class="checkbox-item" wx:for="{{serviceOptions}}" wx:key="index">
+          <checkbox value="{{item}}" checked="{{selectedServices.includes(item)}}" />
+          <text>{{item}}</text>
+        </view>
+      </checkbox-group>
+    </view>
+    
+    <view class="form-item">
+      <view class="label">联系方式</view>
+      <input class="input" type="number" placeholder="请输入您的手机号码" bindinput="onContactInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="label">地址</view>
+      <input class="input" placeholder="请输入您的详细地址" bindinput="onAddressInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="label">期望服务时间</view>
+      <picker mode="date" start="{{today}}" end="{{endDate}}" bindchange="onDateChange">
+        <view class="picker-value">{{serviceDate || '请选择日期'}}</view>
+      </picker>
+    </view>
+  </view>
+  
+  <view class="remarks-container">
+    <view class="label">备注信息（可选）</view>
+    <textarea class="textarea" placeholder="请输入其他需要说明的信息" bindinput="onRemarksInput"></textarea>
+  </view>
+  
+  <button class="submit-btn" bindtap="submitService">提交预约</button>
+</view>
