@@ -132,21 +132,27 @@
         <view class="brand-list">
             <view class="brand-item">
                 <image src="../../images/maintenance/brand1.png" mode="aspectFit"></image>
+                格力
             </view>
             <view class="brand-item">
                 <image src="../../images/maintenance/brand2.png" mode="aspectFit"></image>
+                美的
             </view>
             <view class="brand-item">
                 <image src="../../images/maintenance/brand3.png" mode="aspectFit"></image>
+                海尔
             </view>
             <view class="brand-item">
                 <image src="../../images/maintenance/brand4.png" mode="aspectFit"></image>
+                松下
             </view>
             <view class="brand-item">
                 <image src="../../images/maintenance/brand5.png" mode="aspectFit"></image>
+                
             </view>
             <view class="brand-item">
                 <image src="../../images/maintenance/brand6.png" mode="aspectFit"></image>
+
             </view>
         </view>
     </view>

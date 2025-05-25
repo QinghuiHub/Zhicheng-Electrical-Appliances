@@ -8,10 +8,10 @@ Page({
     currentSwiperIndex: 0,
     phoneNumber: '13330130661', // 客服电话
     location: {
-      latitude: 30.27415,
-      longitude: 120.15515,
+      latitude: 24.742,
+      longitude: 114.528,
       name: '志成电器总店',
-      address: '浙江省杭州市西湖区文三路XXX号'
+      address: '江西省赣州市全南县',
     }
   },
   onLoad: function(options) {

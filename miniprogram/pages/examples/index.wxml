@@ -1,2 +1,25 @@
 <!--pages/examples/index.wxml-->
-<text>线下店</text>
+<view class="store-page">
+  <view class="header">
+    <text class="title">为你推荐精选门店</text>
+  </view>
+  
+  <view class="store-list">
+    <view class="store-item" wx:for="{{storeList}}" wx:key="id">
+      <view class="store-info">
+        <view class="store-icon"></view>
+        <view class="store-detail">
+          <view class="store-name">{{item.name}}</view>
+          <view class="store-address">{{item.address}}</view>
+          <view class="store-distance">
+            <view class="location-icon"></view>
+            <text>{{item.distance}}m</text>
+          </view>
+        </view>
+      </view>
+      <view class="store-action">
+        <button class="enter-btn" bindtap="goToStore" data-id="{{item.id}}">进店选购</button>
+      </view>
+    </view>
+  </view>
+</view>
