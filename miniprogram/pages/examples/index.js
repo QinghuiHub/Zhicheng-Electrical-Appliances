@@ -36,84 +36,30 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-    // 可以在这里从服务器获取门店数据
-    this._adjustViewport();
-  },
-
-  /**
-   * 调整视口以适应不同设备
-   */
-  _adjustViewport() {
-    const systemInfo = wx.getSystemInfoSync();
-    const windowWidth = systemInfo.windowWidth;
-    this.setData({
-      windowWidth: windowWidth
-    });
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  onLoad: function() {
+    console.log('页面加载');
   },
 
   /**
    * 进入门店
    */
-  goToStore(e) {
-    const storeId = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/store-detail/index?id=${storeId}`,
-      fail: () => {
-        wx.showToast({
-          title: '门店详情页面开发中',
-          icon: 'none'
-        });
-      }
+  goToStore: function(e) {
+    wx.showToast({
+      title: '门店详情开发中',
+      icon: 'none'
     });
+  },
+
+  onReady: function() {},
+  onShow: function() {},
+  onHide: function() {},
+  onUnload: function() {},
+  onPullDownRefresh: function() {},
+  onReachBottom: function() {},
+  onShareAppMessage: function() {
+    return {
+      title: '志成电器线下门店',
+      path: '/pages/examples/index'
+    };
   }
 })

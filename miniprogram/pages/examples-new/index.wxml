@@ -1,0 +1,12 @@
+<!--pages/examples-new/index.wxml-->
+<view class="page">
+  <view class="title">为你推荐精选门店</view>
+  <view class="list">
+    <view class="item" wx:for="{{storeList}}" wx:key="id">
+      <view class="name">{{item.name}}</view>
+      <view class="address">{{item.address}}</view>
+      <view class="distance">{{item.distance}}m</view>
+      <button class="btn" bindtap="goToStore">进店选购</button>
+    </view>
+  </view>
+</view> 

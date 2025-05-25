@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/examples/index",
+    "pages/examples-new/index",
     "pages/user-center/index",
     "pages/maintenance/fault/index",
     "pages/maintenance/workorder/index",
@@ -29,7 +30,7 @@
         "selectedIconPath": "images/icons/examples-active.png"
       },
       {
-        "pagePath": "pages/examples/index",
+        "pagePath": "pages/examples-new/index",
         "text": "线下店",
         "iconPath": "images/icons/home.png",
         "selectedIconPath": "images/icons/home-active.png"
@@ -42,5 +43,6 @@
       }
     ]
   },
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {}
 }
