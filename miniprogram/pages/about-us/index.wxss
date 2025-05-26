@@ -1,0 +1,38 @@
+/* pages/about-us/index.wxss */
+page {
+  background-color: #f5f7fa;
+  font-size: 28rpx;
+}
+
+.about-us-container {
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.about-us-list {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.about-us-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 24rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.about-us-item:last-child {
+  border-bottom: none;
+}
+
+.item-title {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.item-arrow {
+  color: #ccc;
+  font-size: 32rpx;
+} 

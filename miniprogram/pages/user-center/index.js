@@ -115,6 +115,15 @@ Page({
   },
 
   /**
+   * 导航到关于我们页面
+   */
+  navigateToAboutUs() {
+    wx.navigateTo({
+      url: '/pages/about-us/index'
+    });
+  },
+
+  /**
    * 生命周期函数--监听页面隐藏
    */
   onHide() {

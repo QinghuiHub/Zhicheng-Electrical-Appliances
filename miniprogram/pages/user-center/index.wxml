@@ -33,7 +33,7 @@
       <text class="function-title">联系客服</text>
       <text class="function-arrow">></text>
     </view>
-    <view class="function-item">
+    <view class="function-item" bindtap="navigateToAboutUs">
       <text class="function-title">关于我们</text>
       <text class="function-arrow">></text>
     </view>
