@@ -1,0 +1,71 @@
+<!--pages/about-us/privacy/index.wxml-->
+<view class="privacy-container">
+  <view class="privacy-content">
+    <view class="privacy-title">志成电器小程序隐私协议</view>
+    
+    <view class="privacy-section">
+      <view class="section-title">引言</view>
+      <view class="section-content">
+        <text>本隐私协议适用于志成电器小程序提供的所有服务。我们非常重视您的个人信息和隐私保护。请您在使用我们的服务前，仔细阅读并了解本隐私协议。</text>
+      </view>
+    </view>
+    
+    <view class="privacy-section">
+      <view class="section-title">我们收集的信息</view>
+      <view class="section-content">
+        <text>1. 您提供的信息：当您注册账户、预约维修或安装服务时，我们会收集您的姓名、联系电话、地址等信息。</text>
+        <text>2. 设备信息：我们会收集您使用的设备型号、操作系统版本等信息，以便为您提供更好的服务体验。</text>
+        <text>3. 位置信息：在您使用门店查找、上门服务等功能时，我们会获取您的位置信息。</text>
+      </view>
+    </view>
+    
+    <view class="privacy-section">
+      <view class="section-title">信息的使用</view>
+      <view class="section-content">
+        <text>1. 提供服务：我们使用收集的信息来提供、维护和改进我们的服务。</text>
+        <text>2. 客户服务：用于回应您的咨询、提供技术支持和客户服务。</text>
+        <text>3. 安全保障：用于验证身份，防止欺诈和保障账户安全。</text>
+      </view>
+    </view>
+    
+    <view class="privacy-section">
+      <view class="section-title">信息的共享</view>
+      <view class="section-content">
+        <text>1. 服务提供商：我们可能会与提供技术支持、物流配送等服务的合作伙伴共享必要的信息。</text>
+        <text>2. 法律要求：根据法律法规的要求，我们可能会披露您的个人信息。</text>
+      </view>
+    </view>
+    
+    <view class="privacy-section">
+      <view class="section-title">信息安全</view>
+      <view class="section-content">
+        <text>我们采取各种安全措施来保护您的个人信息，防止信息的丢失、不当使用、未经授权的访问或披露。</text>
+      </view>
+    </view>
+    
+    <view class="privacy-section">
+      <view class="section-title">您的权利</view>
+      <view class="section-content">
+        <text>1. 访问和更正：您有权访问和更正您的个人信息。</text>
+        <text>2. 删除：您可以要求删除您的账户和相关个人信息。</text>
+        <text>3. 撤回同意：您可以随时撤回您的同意，但这不会影响此前基于您的同意所进行的处理。</text>
+      </view>
+    </view>
+    
+    <view class="privacy-section">
+      <view class="section-title">协议更新</view>
+      <view class="section-content">
+        <text>我们可能会不时更新本隐私协议。如有重大变更，我们会通过小程序内通知或其他方式通知您。</text>
+      </view>
+    </view>
+    
+    <view class="privacy-section">
+      <view class="section-title">联系我们</view>
+      <view class="section-content">
+        <text>如果您对本隐私协议有任何疑问，请联系我们：</text>
+        <text>电话：13330130661</text>
+        <text>地址：江西省赣州市全南县</text>
+      </view>
+    </view>
+  </view>
+</view> 

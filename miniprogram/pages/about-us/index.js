@@ -28,40 +28,38 @@ Page({
     
     switch(type) {
       case 'privacy':
-        title = '志成电器隐私协议';
-        content = '这里是志成电器隐私协议的内容...';
-        break;
+        // 跳转到隐私协议页面
+        wx.navigateTo({
+          url: '/pages/about-us/privacy/index'
+        });
+        return;
       case 'service':
-        title = '志成电器用户服务协议';
-        content = '这里是志成电器用户服务协议的内容...';
-        break;
+        // 跳转到用户服务协议页面
+        wx.navigateTo({
+          url: '/pages/about-us/service/index'
+        });
+        return;
       case 'info-list':
-        title = '已收集个人信息清单';
-        content = '这里是已收集个人信息清单的内容...';
-        break;
+        // 跳转到已收集个人信息清单页面
+        wx.navigateTo({
+          url: '/pages/about-us/info-list/index'
+        });
+        return;
       case 'third-party':
-        title = '第三方共享个人信息';
-        content = '这里是第三方共享个人信息的内容...';
-        break;
+        // 跳转到第三方共享个人信息页面
+        wx.navigateTo({
+          url: '/pages/about-us/third-party/index'
+        });
+        return;
       case 'help':
-        title = '帮助中心';
-        content = '这里是帮助中心的内容...';
-        break;
+        // 跳转到帮助中心页面
+        wx.navigateTo({
+          url: '/pages/about-us/help/index'
+        });
+        return;
       default:
         return;
     }
-    
-    // 暂时使用弹窗显示内容，后续可以跳转到对应的详情页
-    wx.showModal({
-      title: title,
-      content: content,
-      showCancel: false
-    });
-    
-    // 后续可以实现跳转到详情页
-    // wx.navigateTo({
-    //   url: `/pages/about-us/${type}/index`
-    // });
   },
 
   /**

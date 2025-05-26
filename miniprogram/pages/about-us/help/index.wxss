@@ -1,0 +1,25 @@
+/* pages/about-us/help/index.wxss */
+page {
+  background-color: #fff;
+  font-size: 28rpx;
+}
+
+.help-container {
+  padding: 30rpx 24rpx;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.help-content {
+  width: 100%;
+  text-align: center;
+}
+
+.help-title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+} 

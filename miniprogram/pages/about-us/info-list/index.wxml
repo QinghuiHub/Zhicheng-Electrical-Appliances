@@ -1,0 +1,97 @@
+<!--pages/about-us/info-list/index.wxml-->
+<view class="info-list-container">
+  <view class="info-list-content">
+    <view class="info-list-title">已收集个人信息清单</view>
+    
+    <view class="info-list-section">
+      <view class="section-title">一、基本信息</view>
+      <view class="section-content">
+        <text class="info-item">1. 账号信息：用户名、手机号、微信账号关联信息</text>
+        <text class="info-item">2. 个人身份信息：姓名、性别、出生日期（非必填）</text>
+        <text class="info-item">3. 联系方式：手机号码、电子邮箱（选填）</text>
+      </view>
+    </view>
+    
+    <view class="info-list-section">
+      <view class="section-title">二、设备信息</view>
+      <view class="section-content">
+        <text class="info-item">1. 设备标识符：设备型号、操作系统版本、设备识别码</text>
+        <text class="info-item">2. 网络信息：IP地址、Wi-Fi信息、网络运营商信息</text>
+        <text class="info-item">3. 应用信息：应用版本号、系统设置、应用崩溃记录</text>
+      </view>
+    </view>
+    
+    <view class="info-list-section">
+      <view class="section-title">三、位置信息</view>
+      <view class="section-content">
+        <text class="info-item">1. 精确位置信息：GPS位置（需用户授权）</text>
+        <text class="info-item">2. 大致位置信息：基于网络的位置信息</text>
+        <text class="info-item">3. 服务地址：用户填写的服务地址、常用地址</text>
+      </view>
+    </view>
+    
+    <view class="info-list-section">
+      <view class="section-title">四、服务使用信息</view>
+      <view class="section-content">
+        <text class="info-item">1. 订单信息：服务类型、服务时间、服务地点、服务费用</text>
+        <text class="info-item">2. 家电信息：家电类型、品牌、型号、购买时间、故障描述</text>
+        <text class="info-item">3. 使用记录：服务预约历史、服务评价、投诉记录</text>
+        <text class="info-item">4. 支付信息：支付方式、交易记录（不包含完整支付卡号）</text>
+      </view>
+    </view>
+    
+    <view class="info-list-section">
+      <view class="section-title">五、通信内容</view>
+      <view class="section-content">
+        <text class="info-item">1. 客服沟通记录：与客服的文字、语音沟通内容</text>
+        <text class="info-item">2. 反馈信息：用户提交的问题反馈、建议内容</text>
+      </view>
+    </view>
+    
+    <view class="info-list-section">
+      <view class="section-title">六、行为信息</view>
+      <view class="section-content">
+        <text class="info-item">1. 浏览记录：访问的页面、停留时间、点击操作</text>
+        <text class="info-item">2. 搜索记录：搜索的关键词、搜索时间</text>
+        <text class="info-item">3. 偏好设置：个性化设置、常用功能设置</text>
+      </view>
+    </view>
+    
+    <view class="info-list-section">
+      <view class="section-title">七、信息收集方式</view>
+      <view class="section-content">
+        <text class="info-item">1. 直接提供：用户注册、填写表单、预约服务时主动提供</text>
+        <text class="info-item">2. 自动收集：通过cookies、日志文件、SDK等技术自动收集</text>
+        <text class="info-item">3. 第三方获取：从合作伙伴、服务提供商处获取（经用户授权）</text>
+      </view>
+    </view>
+    
+    <view class="info-list-section">
+      <view class="section-title">八、信息使用目的</view>
+      <view class="section-content">
+        <text class="info-item">1. 提供服务：完成用户预约、安排技术人员上门服务</text>
+        <text class="info-item">2. 改进服务：分析用户需求，优化服务流程和体验</text>
+        <text class="info-item">3. 安全保障：验证用户身份，防止欺诈行为</text>
+        <text class="info-item">4. 客户服务：解答用户疑问，处理用户投诉</text>
+      </view>
+    </view>
+    
+    <view class="info-list-section">
+      <view class="section-title">九、信息存储期限</view>
+      <view class="section-content">
+        <text class="info-item">1. 账号存续期间：在用户账号有效期内保存</text>
+        <text class="info-item">2. 法律要求：根据法律法规要求的时间保存</text>
+        <text class="info-item">3. 业务需要：根据业务需要合理确定的期限</text>
+      </view>
+    </view>
+    
+    <view class="info-list-section">
+      <view class="section-title">十、信息安全保障</view>
+      <view class="section-content">
+        <text class="info-item">1. 技术措施：数据加密、访问控制、安全审计</text>
+        <text class="info-item">2. 管理措施：员工培训、保密协议、责任追究</text>
+        <text class="info-item">3. 应急响应：安全事件应急预案和处置机制</text>
+      </view>
+    </view>
+  </view>
+</view> 

@@ -1,0 +1,6 @@
+<!--pages/about-us/help/index.wxml-->
+<view class="help-container">
+  <view class="help-content">
+    <view class="help-title">帮助中心</view>
+  </view>
+</view> 

@@ -1,0 +1,104 @@
+<!--pages/about-us/third-party/index.wxml-->
+<view class="third-party-container">
+  <view class="third-party-content">
+    <view class="third-party-title">第三方共享个人信息</view>
+    
+    <view class="third-party-section">
+      <view class="section-title">一、共享信息的范围</view>
+      <view class="section-content">
+        <text class="info-item">根据相关法律法规和用户授权，我们可能会向第三方共享以下类型的个人信息：</text>
+        <text class="info-item">1. 基本身份信息：姓名、联系电话（根据服务需要）</text>
+        <text class="info-item">2. 设备信息：设备型号、操作系统版本（用于系统兼容性分析）</text>
+        <text class="info-item">3. 位置信息：服务地址（仅用于上门服务安排）</text>
+        <text class="info-item">4. 服务信息：家电型号、故障描述（用于服务提供）</text>
+      </view>
+    </view>
+    
+    <view class="third-party-section">
+      <view class="section-title">二、共享信息的对象</view>
+      <view class="section-content">
+        <text class="info-item">我们可能会与以下类型的第三方共享您的个人信息：</text>
+      </view>
+      
+      <view class="third-party-item">
+        <view class="item-title">1. 服务提供商</view>
+        <view class="item-content">
+          <text class="partner-name">• 技术服务提供商</text>
+          <text class="share-purpose">共享目的：提供家电维修、安装、保养等技术服务</text>
+          <text class="share-info">共享信息：姓名、联系电话、地址、家电型号、故障描述</text>
+        </view>
+      </view>
+      
+      <view class="third-party-item">
+        <view class="item-title">2. 物流配送合作伙伴</view>
+        <view class="item-content">
+          <text class="partner-name">• 物流服务公司</text>
+          <text class="share-purpose">共享目的：提供配件配送、旧家电回收等服务</text>
+          <text class="share-info">共享信息：姓名、联系电话、地址</text>
+        </view>
+      </view>
+      
+      <view class="third-party-item">
+        <view class="item-title">3. 支付服务提供商</view>
+        <view class="item-content">
+          <text class="partner-name">• 支付平台</text>
+          <text class="share-purpose">共享目的：处理服务费用支付</text>
+          <text class="share-info">共享信息：订单号、交易金额（不包含完整支付卡号）</text>
+        </view>
+      </view>
+      
+      <view class="third-party-item">
+        <view class="item-title">4. 技术支持服务商</view>
+        <view class="item-content">
+          <text class="partner-name">• 云服务提供商</text>
+          <text class="share-purpose">共享目的：提供数据存储、分析服务</text>
+          <text class="share-info">共享信息：使用记录、设备信息（去标识化处理）</text>
+        </view>
+        
+        <view class="item-content">
+          <text class="partner-name">• 客服系统提供商</text>
+          <text class="share-purpose">共享目的：提供客户服务支持</text>
+          <text class="share-info">共享信息：姓名、联系电话、服务记录</text>
+        </view>
+      </view>
+      
+      <view class="third-party-item">
+        <view class="item-title">5. 关联公司</view>
+        <view class="item-content">
+          <text class="partner-name">• 志成电器关联企业</text>
+          <text class="share-purpose">共享目的：提供综合服务、改进产品和服务</text>
+          <text class="share-info">共享信息：服务记录、使用偏好（经用户授权）</text>
+        </view>
+      </view>
+    </view>
+    
+    <view class="third-party-section">
+      <view class="section-title">三、共享信息的安全保障</view>
+      <view class="section-content">
+        <text class="info-item">1. 我们会与第三方签署严格的保密协议，要求他们按照我们的说明、本隐私政策以及其他任何相关的保密和安全措施来处理个人信息。</text>
+        <text class="info-item">2. 我们会对第三方处理个人信息的活动进行安全评估，确保信息安全。</text>
+        <text class="info-item">3. 如第三方违反协议，我们将采取包括终止合作在内的法律措施维护用户权益。</text>
+      </view>
+    </view>
+    
+    <view class="third-party-section">
+      <view class="section-title">四、共享信息的用户控制</view>
+      <view class="section-content">
+        <text class="info-item">1. 用户有权拒绝向第三方共享个人信息，但可能会影响相关服务的提供。</text>
+        <text class="info-item">2. 用户可以通过小程序"设置"功能或联系客服，管理个人信息的共享范围。</text>
+        <text class="info-item">3. 如用户撤回授权，我们将停止向相关第三方提供个人信息，但不影响此前基于授权已进行的信息共享。</text>
+      </view>
+    </view>
+    
+    <view class="third-party-section">
+      <view class="section-title">五、法律依据</view>
+      <view class="section-content">
+        <text class="info-item">我们共享用户个人信息的法律依据包括：</text>
+        <text class="info-item">1. 用户的明确同意；</text>
+        <text class="info-item">2. 为履行与用户的合同所必需；</text>
+        <text class="info-item">3. 为遵守法律法规的要求；</text>
+        <text class="info-item">4. 为保护用户或公众的重大利益。</text>
+      </view>
+    </view>
+  </view>
+</view> 

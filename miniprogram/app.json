@@ -8,7 +8,12 @@
     "pages/maintenance/inventory/index",
     "pages/maintenance/statistics/index",
     "pages/examples-new/index",
-    "pages/about-us/index"
+    "pages/about-us/index",
+    "pages/about-us/privacy/index",
+    "pages/about-us/service/index",
+    "pages/about-us/info-list/index",
+    "pages/about-us/third-party/index",
+    "pages/about-us/help/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

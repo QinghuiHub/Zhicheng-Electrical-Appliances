@@ -1,0 +1,88 @@
+<!--pages/about-us/service/index.wxml-->
+<view class="service-container">
+  <view class="service-content">
+    <view class="service-title">志成电器用户服务协议</view>
+    
+    <view class="service-section">
+      <view class="section-title">一、协议的范围</view>
+      <view class="section-content">
+        <text>1.1 本协议是您与志成电器（以下简称"我们"）之间关于您使用志成电器小程序服务所订立的协议。</text>
+        <text>1.2 本协议适用于志成电器小程序提供的所有服务，包括但不限于家电维修、安装、保养等服务。</text>
+      </view>
+    </view>
+    
+    <view class="service-section">
+      <view class="section-title">二、服务内容</view>
+      <view class="section-content">
+        <text>2.1 志成电器小程序为用户提供家电维修、安装、保养、回收等相关服务的预约和管理功能。</text>
+        <text>2.2 我们有权对服务内容进行更新或调整，并通过小程序公告或其他方式通知用户。</text>
+      </view>
+    </view>
+    
+    <view class="service-section">
+      <view class="section-title">三、用户账号</view>
+      <view class="section-content">
+        <text>3.1 用户需要注册账号才能使用完整的服务功能。</text>
+        <text>3.2 用户应妥善保管账号信息，对账号下的所有活动负责。</text>
+        <text>3.3 用户不得将账号转让、出借给他人使用。</text>
+      </view>
+    </view>
+    
+    <view class="service-section">
+      <view class="section-title">四、用户预约服务</view>
+      <view class="section-content">
+        <text>4.1 用户通过小程序预约服务时，应提供真实、准确的信息，包括但不限于联系方式、地址、家电型号等。</text>
+        <text>4.2 用户应在预约时间保持通讯畅通，并确保服务地点可以正常提供服务。</text>
+        <text>4.3 如需取消或变更预约，请提前与客服联系。</text>
+      </view>
+    </view>
+    
+    <view class="service-section">
+      <view class="section-title">五、服务费用</view>
+      <view class="section-content">
+        <text>5.1 服务费用将根据具体服务项目、家电型号等因素确定，并在用户确认前明确告知。</text>
+        <text>5.2 特殊情况下可能产生额外费用，我们的技术人员会在服务前与您确认。</text>
+      </view>
+    </view>
+    
+    <view class="service-section">
+      <view class="section-title">六、用户行为规范</view>
+      <view class="section-content">
+        <text>6.1 用户不得利用我们的服务从事违法违规活动。</text>
+        <text>6.2 用户不得干扰我们的正常运营，不得侵犯他人合法权益。</text>
+      </view>
+    </view>
+    
+    <view class="service-section">
+      <view class="section-title">七、知识产权</view>
+      <view class="section-content">
+        <text>7.1 志成电器小程序的所有内容，包括但不限于文字、图片、音频、视频、软件、程序、数据等，均受知识产权法律法规保护。</text>
+        <text>7.2 未经我们许可，任何人不得擅自使用、修改、复制、传播或以其他方式使用上述内容。</text>
+      </view>
+    </view>
+    
+    <view class="service-section">
+      <view class="section-title">八、免责声明</view>
+      <view class="section-content">
+        <text>8.1 因不可抗力或其他无法控制的原因造成服务中断或其他缺陷，我们不承担责任，但将尽力减少因此给用户造成的损失。</text>
+        <text>8.2 用户因违反本协议或相关法律法规而导致的任何后果，由用户自行承担。</text>
+      </view>
+    </view>
+    
+    <view class="service-section">
+      <view class="section-title">九、协议修改</view>
+      <view class="section-content">
+        <text>我们有权在必要时修改本协议条款。协议修改后，我们会通过小程序公告或其他方式通知用户。如您继续使用我们的服务，即表示您接受修改后的协议。</text>
+      </view>
+    </view>
+    
+    <view class="service-section">
+      <view class="section-title">十、联系方式</view>
+      <view class="section-content">
+        <text>如您对本协议或服务有任何疑问，请联系我们：</text>
+        <text>电话：13330130661</text>
+        <text>地址：江西省赣州市全南县</text>
+      </view>
+    </view>
+  </view>
+</view> 
