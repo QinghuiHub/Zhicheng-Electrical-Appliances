@@ -1,12 +1,11 @@
 <!--志成电器首页-->
 <view class="container">
-    <view class="header-section">
+    <!-- <view class="header-section">
         <view class="logo-area">
-            <!-- <image class="logo-image" src="../../images/logo.png" mode="aspectFit"></image> -->
-            <!-- <view class="company-name">志成电器</view> -->
+            <view class="company-name">志成电器</view>
         </view>
         <view class="slogan">专业维修，品质服务</view>
-    </view>
+    </view> -->
     
     <swiper 
         class="swiper" 

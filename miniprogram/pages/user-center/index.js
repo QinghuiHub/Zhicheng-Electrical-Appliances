@@ -40,13 +40,17 @@ Page({
     const userInfo = wx.getStorageSync('userInfo') || {};
     const userId = wx.getStorageSync('userId') || this.generateUserId();
     
-    if (userInfo) {
-      this.setData({
-        userInfo,
-        userId,
-        hasUserInfo: Object.keys(userInfo).length > 0
-      });
+    // 如果没有昵称，设置默认昵称为"志成电器"
+    if (!userInfo.nickName) {
+      userInfo.nickName = '志成电器';
+      wx.setStorageSync('userInfo', userInfo);
     }
+    
+    this.setData({
+      userInfo,
+      userId,
+      hasUserInfo: true // 由于设置了默认昵称，所以总是有用户信息
+    });
   },
 
   /**
@@ -120,6 +124,33 @@ Page({
   navigateToAboutUs() {
     wx.navigateTo({
       url: '/pages/about-us/index'
+    });
+  },
+
+  /**
+   * 导航到我的订单页面
+   */
+  navigateToMyOrders() {
+    wx.navigateTo({
+      url: '/pages/my-orders/index'
+    });
+  },
+
+  /**
+   * 导航到我的地址页面
+   */
+  navigateToMyAddress() {
+    wx.navigateTo({
+      url: '/pages/my-address/index'
+    });
+  },
+
+  /**
+   * 导航到联系客服页面
+   */
+  navigateToContactService() {
+    wx.navigateTo({
+      url: '/pages/contact-service/index'
     });
   },
 

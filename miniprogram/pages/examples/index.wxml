@@ -7,19 +7,20 @@
   <view class="store-list">
     <view class="store-item" wx:for="{{storeList}}" wx:key="id">
       <view class="store-info">
-        <view class="store-icon"></view>
+        <!-- <view class="store-icon"></view> -->
+         <text class="store-icon">🏪</text>
         <view class="store-detail">
           <view class="store-name">{{item.name}}</view>
           <view class="store-address">{{item.address}}</view>
           <view class="store-distance">
-            <view class="location-icon"></view>
+            <text class="location-icon">📍</text>
             <text>{{item.distance}}m</text>
           </view>
         </view>
       </view>
-      <view class="store-action">
+      <!-- <view class="store-action">
         <button class="enter-btn" bindtap="goToStore">进店选购</button>
-      </view>
+      </view> -->
     </view>
   </view>
 </view>

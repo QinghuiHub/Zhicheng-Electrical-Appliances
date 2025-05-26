@@ -11,25 +11,24 @@
       </view>
       <view class="user-detail">
         <view class="nickname-container">
-          <text class="nickname" wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</text>
-          <button wx:else class="get-user-info" bindtap="editNickname">设置昵称</button>
+          <text class="nickname">{{userInfo.nickName}}</text>
         </view>
-        <text class="user-id" wx:if="{{userInfo.nickName}}">用户ID: {{userId}}</text>
+        <text class="user-id">用户ID: {{userId}}</text>
       </view>
     </view>
   </view>
 
   <!-- 功能列表 -->
   <view class="function-list">
-    <view class="function-item">
+    <view class="function-item" bindtap="navigateToMyOrders">
       <text class="function-title">我的订单</text>
       <text class="function-arrow">></text>
     </view>
-    <view class="function-item">
+    <view class="function-item" bindtap="navigateToMyAddress">
       <text class="function-title">我的地址</text>
       <text class="function-arrow">></text>
     </view>
-    <view class="function-item">
+    <view class="function-item" bindtap="navigateToContactService">
       <text class="function-title">联系客服</text>
       <text class="function-arrow">></text>
     </view>

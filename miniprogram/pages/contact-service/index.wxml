@@ -1,0 +1,4 @@
+<!--pages/contact-service/index.wxml-->
+<view class="contact-service-container">
+  <view class="contact-service-title">联系客服</view>
+</view> 

@@ -27,7 +27,7 @@ page {
 .store-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background-color: #fff;
   border-radius: 12rpx;
   padding: 20rpx;
@@ -37,19 +37,17 @@ page {
 
 .store-info {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex: 1;
-  max-width: calc(100% - 130rpx);
+  max-width: 100%;
   overflow: hidden;
 }
 
 .store-icon {
-  width: 56rpx;
-  height: 56rpx;
+  font-size: 56rpx;
   margin-right: 16rpx;
-  background-color: #4a90e2;
-  border-radius: 6rpx;
   flex-shrink: 0;
+  line-height: 1;
 }
 
 .store-detail {
@@ -63,18 +61,16 @@ page {
   font-weight: bold;
   color: #333;
   margin-bottom: 6rpx;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .store-address {
   font-size: 24rpx;
   color: #666;
   margin-bottom: 4rpx;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .store-distance {
@@ -85,12 +81,10 @@ page {
 }
 
 .location-icon {
-  width: 18rpx;
-  height: 18rpx;
-  margin-right: 4rpx;
-  background-color: #999;
-  border-radius: 50%;
+  font-size: 20rpx;
+  margin-right: 6rpx;
   flex-shrink: 0;
+  line-height: 1;
 }
 
 .store-action {
@@ -114,20 +108,23 @@ page {
 
 .enter-btn::after {
   border: none;
-}/* 小屏幕设备 */
+}
+
+/* 小屏幕设备 */
 @media screen and (max-width: 320px) {
   .store-icon {
-    width: 50rpx;
-    height: 50rpx;
+    font-size: 50rpx;
     margin-right: 12rpx;
   }
   
   .store-name {
     font-size: 26rpx;
+    margin-bottom: 4rpx;
   }
   
   .store-address {
     font-size: 22rpx;
+    margin-bottom: 3rpx;
   }
   
   .store-distance {
@@ -141,20 +138,27 @@ page {
     min-width: 100rpx;
     padding: 0 12rpx;
   }
+  
+  .location-icon {
+    font-size: 18rpx;
+    margin-right: 4rpx;
+  }
 }
+
 /* 中等屏幕设备 */
 @media screen and (min-width: 375px) {
   .store-icon {
-    width: 60rpx;
-    height: 60rpx;
+    font-size: 60rpx;
   }
   
   .store-name {
     font-size: 30rpx;
+    margin-bottom: 6rpx;
   }
   
   .store-address {
     font-size: 24rpx;
+    margin-bottom: 5rpx;
   }
   
   .store-distance {
@@ -185,8 +189,7 @@ page {
   }
   
   .store-icon {
-    width: 64rpx;
-    height: 64rpx;
+    font-size: 64rpx;
     margin-right: 20rpx;
   }
   
@@ -205,8 +208,7 @@ page {
   }
   
   .location-icon {
-    width: 20rpx;
-    height: 20rpx;
+    font-size: 20rpx;
     margin-right: 6rpx;
   }
   
