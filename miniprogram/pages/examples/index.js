@@ -51,7 +51,9 @@ Page({
   },
 
   onReady: function() {},
-  onShow: function() {},
+  onShow: function() {
+    console.log('切换到线下店页面');
+  },
   onHide: function() {},
   onUnload: function() {},
   onPullDownRefresh: function() {},

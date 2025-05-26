@@ -27,7 +27,7 @@ Page({
     
   },
   onShow: function() {
-    
+    console.log('切换到服务页面');
   },
   onHide: function() {
 

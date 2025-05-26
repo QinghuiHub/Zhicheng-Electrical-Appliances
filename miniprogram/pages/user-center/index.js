@@ -30,6 +30,7 @@ Page({
   onShow() {
     // 每次显示页面时检查用户信息是否更新
     this.getUserInfo();
+    console.log('切换到我的页面');
   },
 
   /**
