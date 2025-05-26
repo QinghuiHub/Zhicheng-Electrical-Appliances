@@ -45,13 +45,13 @@
     <view class="quick-contact">
         <view class="contact-item" bindtap="makePhoneCall">
             <view class="contact-icon phone-icon">
-                <!-- <image src="../../images/maintenance/phone.png" mode="aspectFit"></image> -->
+                <text class="icon-text">📞</text>
             </view>
             <view class="contact-text">一键拨号</view>
         </view>
         <view class="contact-item" bindtap="openLocation">
             <view class="contact-icon location-icon">
-                <!-- <image src="../../images/maintenance/location.png" mode="aspectFit"></image> -->
+                <text class="icon-text">📍</text>
             </view>
             <view class="contact-text">查看门店</view>
         </view>
@@ -62,7 +62,7 @@
         <view class="service-grid">
             <view class="service-item" bindtap="navigateToMaintenance" data-type="fault">
                 <view class="service-icon repair-icon">
-                    <!-- <image src="../../images/maintenance/repair.png" mode="aspectFit"></image> -->
+                    <text class="icon-text">🔧</text>
                 </view>
                 <view class="service-text">预约维修</view>
                 <view class="service-desc">专业技师上门维修</view>
@@ -70,7 +70,7 @@
             
             <view class="service-item" bindtap="navigateToMaintenance" data-type="workorder">
                 <view class="service-icon install-icon">
-                    <!-- <image src="../../images/maintenance/install.png" mode="aspectFit"></image> -->
+                    <text class="icon-text">🔌</text>
                 </view>
                 <view class="service-text">预约安装</view>
                 <view class="service-desc">专业安装各类家电</view>
@@ -78,7 +78,7 @@
             
             <view class="service-item" bindtap="navigateToMaintenance" data-type="inventory">
                 <view class="service-icon maintain-icon">
-                    <!-- <image src="../../images/maintenance/maintain.png" mode="aspectFit"></image> -->
+                    <text class="icon-text">🔄</text>
                 </view>
                 <view class="service-text">保养换芯</view>
                 <view class="service-desc">定期保养延长寿命</view>
@@ -86,7 +86,7 @@
             
             <view class="service-item" bindtap="navigateToMaintenance" data-type="statistics">
                 <view class="service-icon recycle-icon">
-                    <!-- <image src="../../images/maintenance/recycle.png" mode="aspectFit"></image> -->
+                    <text class="icon-text">♻️</text>
                 </view>
                 <view class="service-text">旧机回收</view>
                 <view class="service-desc">环保回收旧电器</view>
@@ -99,7 +99,7 @@
         <view class="advantage-list">
             <view class="advantage-item">
                 <view class="advantage-icon">
-                    <!-- <image src="../../images/maintenance/quality.png" mode="aspectFit"></image> -->
+                    <text class="icon-text">⭐</text>
                 </view>
                 <view class="advantage-content">
                     <view class="advantage-title">专业品质</view>
@@ -108,7 +108,7 @@
             </view>
             <view class="advantage-item">
                 <view class="advantage-icon">
-                    <!-- <image src="../../images/maintenance/speed.png" mode="aspectFit"></image> -->
+                    <text class="icon-text">⚡</text>
                 </view>
                 <view class="advantage-content">
                     <view class="advantage-title">快速响应</view>
@@ -117,7 +117,7 @@
             </view>
             <view class="advantage-item">
                 <view class="advantage-icon">
-                    <!-- <image src="../../images/maintenance/warranty.png" mode="aspectFit"></image> -->
+                    <text class="icon-text">🛡️</text>
                 </view>
                 <view class="advantage-content">
                     <view class="advantage-title">服务保障</view>

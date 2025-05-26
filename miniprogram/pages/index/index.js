@@ -115,23 +115,9 @@ Page({
     });
   },
   openLocation() {
-    const { latitude, longitude, name, address } = this.data.location;
-    wx.openLocation({
-      latitude,
-      longitude,
-      name,
-      address,
-      scale: 18,
-      success: () => {
-        console.log('打开位置成功');
-      },
-      fail: (err) => {
-        console.error('打开位置失败', err);
-        wx.showToast({
-          title: '打开位置失败',
-          icon: 'none'
-        });
-      }
+    // 跳转到线下店页面
+    wx.switchTab({
+      url: '/pages/examples/index'
     });
   }
 });

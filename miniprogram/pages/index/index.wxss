@@ -108,6 +108,11 @@
   height: 40rpx;
 }
 
+.contact-icon .icon-text {
+  font-size: 32rpx;
+  line-height: 1;
+}
+
 .phone-icon {
   color: #1976D2;
 }
@@ -186,6 +191,12 @@
 .service-icon image {
   width: 50rpx;
   height: 50rpx;
+  border-radius: 50%;
+}
+
+.service-icon .icon-text {
+  font-size: 36rpx;
+  line-height: 1;
 }
 
 .repair-icon {
@@ -259,6 +270,11 @@
 .advantage-icon image {
   width: 40rpx;
   height: 40rpx;
+}
+
+.advantage-icon .icon-text {
+  font-size: 36rpx;
+  line-height: 1;
 }
 
 .advantage-content {
