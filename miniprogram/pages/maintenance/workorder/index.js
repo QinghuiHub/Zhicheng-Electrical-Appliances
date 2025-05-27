@@ -1,6 +1,8 @@
 Page({
   data: {
     activeTab: 'all',
+    loading: false,
+    filteredOrders: [],
     workOrders: [
       {
         id: '001',
@@ -45,8 +47,8 @@ Page({
   },
 
   onLoad(options) {
-    // 页面加载时可以从服务器获取工单数据
-    console.log('工单页面加载');
+    // 页面加载时获取全部工单数据
+    this.filterWorkOrders('all');
   },
 
   // 切换标签
@@ -60,9 +62,31 @@ Page({
 
   // 根据标签筛选工单
   filterWorkOrders(tab) {
-    // 这里应该是从服务器获取对应状态的工单
-    // 这里仅做演示，使用本地数据模拟
-    console.log(`切换到${tab}标签`);
+    // 先清空数据，显示loading
+    this.setData({
+      filteredOrders: [],
+      loading: true
+    });
+
+    // 模拟网络请求延迟
+    setTimeout(() => {
+      let filteredData = [];
+      
+      // 根据tab筛选数据
+      if (tab === 'all') {
+        filteredData = this.data.workOrders;
+      } else {
+        filteredData = this.data.workOrders.filter(order => order.status === tab);
+      }
+      
+      // 更新数据，关闭loading
+      this.setData({
+        filteredOrders: filteredData,
+        loading: false
+      });
+      
+      console.log(`切换到${tab}标签，共${filteredData.length}条数据`);
+    }, 800); // 模拟加载延迟
   },
 
   // 查看工单详情
@@ -83,11 +107,14 @@ Page({
   onReady: function() {},
   onShow: function() {
     console.log('切换到工单页面');
+    // 页面显示时刷新当前标签的数据
+    this.filterWorkOrders(this.data.activeTab);
   },
   onHide: function() {},
   onUnload: function() {},
   onPullDownRefresh: function() {
     // 下拉刷新，重新获取工单数据
+    this.filterWorkOrders(this.data.activeTab);
     setTimeout(() => {
       wx.stopPullDownRefresh();
     }, 1000);

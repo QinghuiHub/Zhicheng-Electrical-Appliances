@@ -11,8 +11,15 @@
     <view class="tab-item {{activeTab === 'completed' ? 'active' : ''}}" bindtap="switchTab" data-tab="completed">已完成</view>
   </view>
   
-  <view class="workorder-list" wx:if="{{workOrders.length > 0}}">
-    <view class="workorder-item" wx:for="{{workOrders}}" wx:key="id" bindtap="viewWorkOrderDetail" data-id="{{item.id}}">
+  <!-- 加载中状态 -->
+  <view class="loading-container" wx:if="{{loading}}">
+    <view class="loading-icon"></view>
+    <view class="loading-text">加载中...</view>
+  </view>
+  
+  <!-- 工单列表 -->
+  <view class="workorder-list" wx:elif="{{filteredOrders.length > 0}}">
+    <view class="workorder-item" wx:for="{{filteredOrders}}" wx:key="id" bindtap="viewWorkOrderDetail" data-id="{{item.id}}">
       <view class="workorder-header">
         <view class="workorder-type">{{item.type}}</view>
         <view class="workorder-status {{item.status}}">{{item.statusText}}</view>
@@ -44,6 +51,7 @@
     </view>
   </view>
   
+  <!-- 空状态 -->
   <view class="empty-container" wx:else>
     <view class="empty-icon">📋</view>
     <view class="empty-text">暂无工单记录</view>
