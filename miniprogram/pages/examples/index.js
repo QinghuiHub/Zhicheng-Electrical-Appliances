@@ -10,32 +10,42 @@ Page({
         id: 1,
         name: '志成电器总店',
         address: '江西省赣州市全南县S454社迳初级中学东侧约210米',
-        distance: '553'
+        distance: '553',
+        latitude: 24.9305,
+        longitude: 114.5620
       },
       {
         id: 2,
         name: '志成电器(社迳乡老街店)',
         address: '江西省赣州市全南县社迳大桥社迳乡政府斜对面',
-        distance: '617'
+        distance: '617',
+        latitude: 25.077049,
+        longitude: 114.687744
       },
       {
         id: 3,
-        name: '兰英商行(经销商)',
+        name: '兰英商行',
         address: '江西省赣州市全南县上屋场S454边上',
-        distance: '1.2k'
+        distance: '1.2k',
+        latitude: 25.05,
+        longitude: 114.55
       },
       {
         id: 4,
-        name: '全南志成电器20分店',
+        name: '全南志成电器',
         address: '江西省赣州市全南县寿梅路与南山路交叉口东北400米',
-        distance: '35.5k'
+        distance: '35.5k',
+        latitude: 24.7420,
+        longitude: 114.5190
       },
-      {
-        id: 4,
-        name: '赣州志成电器30分店',
-        address: '江西省赣州市章贡区京珠线康居小区北侧约230米',
-        distance: '173.5k'
-      }
+      // {
+      //   id: 5,
+      //   name: '赣州志成电器3店',
+      //   address: '江西省赣州市章贡区京珠线康居小区北侧约230米',
+      //   distance: '173.5k',
+      //   latitude: 25.8350,
+      //   longitude: 114.9350
+      // }
     ]
   },
 
@@ -44,6 +54,22 @@ Page({
    */
   onLoad: function() {
     console.log('页面加载');
+  },
+
+  /**
+   * 打开地图显示门店位置
+   */
+  openLocation: function(e) {
+    const index = e.currentTarget.dataset.index;
+    const store = this.data.storeList[index];
+    
+    wx.openLocation({
+      latitude: store.latitude,
+      longitude: store.longitude,
+      name: store.name,
+      address: store.address,
+      scale: 18
+    });
   },
 
   /**

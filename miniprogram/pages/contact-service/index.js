@@ -1,9 +1,11 @@
+// pages/contact-service/index.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**
@@ -24,7 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    console.log('进入联系客服页面');
+
   },
 
   /**
@@ -61,4 +63,4 @@ Page({
   onShareAppMessage() {
 
   }
-}) 
+})

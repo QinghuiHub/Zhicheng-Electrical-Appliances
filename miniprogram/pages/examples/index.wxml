@@ -5,7 +5,7 @@
   </view>
   
   <view class="store-list">
-    <view class="store-item" wx:for="{{storeList}}" wx:key="id">
+    <view class="store-item" wx:for="{{storeList}}" wx:key="id" bindtap="openLocation" data-index="{{index}}">
       <view class="store-info">
         <!-- <view class="store-icon"></view> -->
          <text class="store-icon">🏪</text>
@@ -18,9 +18,9 @@
           </view>
         </view>
       </view>
-      <!-- <view class="store-action">
-        <button class="enter-btn" bindtap="goToStore">进店选购</button>
-      </view> -->
+      <view class="store-action">
+        <view class="map-btn">导航</view>
+      </view>
     </view>
   </view>
 </view>

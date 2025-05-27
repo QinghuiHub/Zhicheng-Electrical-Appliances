@@ -90,6 +90,24 @@ page {
 .store-action {
   margin-left: 12rpx;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.map-btn {
+  background-color: #07C160;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 0 16rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  border-radius: 27rpx;
+  min-width: 110rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .enter-btn {
@@ -131,6 +149,14 @@ page {
     font-size: 20rpx;
   }
   
+  .map-btn {
+    font-size: 20rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    min-width: 100rpx;
+    padding: 0 12rpx;
+  }
+  
   .enter-btn {
     font-size: 20rpx;
     height: 50rpx;
@@ -163,6 +189,13 @@ page {
   
   .store-distance {
     font-size: 22rpx;
+  }
+  
+  .map-btn {
+    font-size: 24rpx;
+    height: 58rpx;
+    line-height: 58rpx;
+    min-width: 120rpx;
   }
   
   .enter-btn {
@@ -210,6 +243,14 @@ page {
   .location-icon {
     font-size: 20rpx;
     margin-right: 6rpx;
+  }
+  
+  .map-btn {
+    font-size: 26rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    min-width: 130rpx;
+    padding: 0 20rpx;
   }
   
   .enter-btn {

@@ -1,4 +1,2 @@
 <!--pages/my-address/index.wxml-->
-<view class="my-address-container">
-  <view class="my-address-title">我的地址</view>
-</view> 
+<text>pages/my-address/index.wxml</text>
