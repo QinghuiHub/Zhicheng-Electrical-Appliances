@@ -21,7 +21,7 @@
             <view class="swiper-item-wrap">
                 <image 
                     class="swiper-image {{currentSwiperIndex == 0 ? 'active' : ''}}" 
-                    src="cloud://cloud1-9guuoeyie2fd8916.636c-cloud1-9guuoeyie2fd8916-1360998817/微信图片_20250527005610.png"
+                    src="cloud://cloud1-9guuoeyie2fd8916.636c-cloud1-9guuoeyie2fd8916-1360998817/服务/轮播图/guobu.jfif"
                     mode="aspectFill"
                     binderror="imageLoadError"
                     bindload="imageLoadSuccess"
@@ -32,7 +32,7 @@
             <view class="swiper-item-wrap">
                 <image 
                     class="swiper-image {{currentSwiperIndex == 1 ? 'active' : ''}}" 
-                    src="cloud://cloud1-9guuoeyie2fd8916.636c-cloud1-9guuoeyie2fd8916-1360998817/guobu.jfif" 
+                    src="cloud://cloud1-9guuoeyie2fd8916.636c-cloud1-9guuoeyie2fd8916-1360998817/服务/轮播图/guobu.jfif" 
                     mode="aspectFill"
                     binderror="imageLoadError"
                     bindload="imageLoadSuccess"
