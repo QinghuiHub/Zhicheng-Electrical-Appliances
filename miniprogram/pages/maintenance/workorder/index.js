@@ -1,190 +1,104 @@
 Page({
   data: {
-    deviceTypes: ['空调', '冰箱', '洗衣机', '热水器', '电视', '其他'],
-    deviceType: '',
-    model: '',
-    brand: '',
-    name: '',
-    contact: '',
-    address: '',
-    installDate: '',
-    today: '',
-    endDate: '',
-    remarks: '',
-    images: []
+    activeTab: 'all',
+    workOrders: [
+      {
+        id: '001',
+        type: '安装服务',
+        status: 'pending',
+        statusText: '待处理',
+        deviceType: '空调',
+        brand: '格力',
+        model: 'KFR-35GW',
+        description: '新购买的空调需要安装',
+        address: '江西省赣州市全南县社迳乡老街45号',
+        appointmentTime: '2023-08-15 上午',
+        createTime: '2023-08-12 10:23'
+      },
+      {
+        id: '002',
+        type: '维修服务',
+        status: 'processing',
+        statusText: '处理中',
+        deviceType: '冰箱',
+        brand: '海尔',
+        model: 'BCD-225WDGK',
+        description: '冰箱不制冷，需要检修',
+        address: '江西省赣州市全南县寿梅路28号',
+        appointmentTime: '2023-08-14 下午',
+        createTime: '2023-08-11 15:47'
+      },
+      {
+        id: '003',
+        type: '维修服务',
+        status: 'completed',
+        statusText: '已完成',
+        deviceType: '洗衣机',
+        brand: '小天鹅',
+        model: 'TG100-1411DG',
+        description: '洗衣机排水不畅',
+        address: '江西省赣州市全南县南山路15号',
+        appointmentTime: '2023-08-10 上午',
+        createTime: '2023-08-08 09:15'
+      }
+    ]
   },
 
   onLoad(options) {
-    // 设置当前日期和30天后的日期
-    const today = new Date();
-    const endDate = new Date();
-    endDate.setDate(today.getDate() + 30);
-    
+    // 页面加载时可以从服务器获取工单数据
+    console.log('工单页面加载');
+  },
+
+  // 切换标签
+  switchTab(e) {
+    const tab = e.currentTarget.dataset.tab;
     this.setData({
-      today: this.formatDate(today),
-      endDate: this.formatDate(endDate)
+      activeTab: tab
+    });
+    this.filterWorkOrders(tab);
+  },
+
+  // 根据标签筛选工单
+  filterWorkOrders(tab) {
+    // 这里应该是从服务器获取对应状态的工单
+    // 这里仅做演示，使用本地数据模拟
+    console.log(`切换到${tab}标签`);
+  },
+
+  // 查看工单详情
+  viewWorkOrderDetail(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/maintenance/workorder/detail/index?id=${id}`
     });
   },
 
-  formatDate(date) {
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    return `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
-  },
-
-  // 选择设备类型
-  onDeviceTypeChange(e) {
-    const index = e.detail.value;
-    this.setData({
-      deviceType: this.data.deviceTypes[index]
+  // 创建新工单
+  createWorkOrder() {
+    wx.navigateTo({
+      url: '/pages/maintenance/workorder/create/index'
     });
   },
 
-  // 型号输入
-  onModelInput(e) {
-    this.setData({
-      model: e.detail.value
-    });
+  onReady: function() {},
+  onShow: function() {
+    console.log('切换到工单页面');
   },
-  
-  // 品牌输入
-  onBrandInput(e) {
-    this.setData({
-      brand: e.detail.value
-    });
-  },
-  
-  // 联系人姓名输入
-  onNameInput(e) {
-    this.setData({
-      name: e.detail.value
-    });
-  },
-
-  // 手机号码输入
-  onContactInput(e) {
-    this.setData({
-      contact: e.detail.value
-    });
-  },
-
-  // 地址输入
-  onAddressInput(e) {
-    this.setData({
-      address: e.detail.value
-    });
-  },
-
-  // 日期选择
-  onDateChange(e) {
-    this.setData({
-      installDate: e.detail.value
-    });
-  },
-  
-  // 备注信息输入
-  onRemarksInput(e) {
-    this.setData({
-      remarks: e.detail.value
-    });
-  },
-
-  // 选择图片
-  chooseImage() {
-    const that = this;
-    wx.chooseImage({
-      count: 3 - that.data.images.length,
-      sizeType: ['compressed'],
-      sourceType: ['album', 'camera'],
-      success(res) {
-        const tempFilePaths = res.tempFilePaths;
-        that.setData({
-          images: [...that.data.images, ...tempFilePaths]
-        });
-      }
-    });
-  },
-
-  // 删除图片
-  deleteImage(e) {
-    const index = e.currentTarget.dataset.index;
-    const images = this.data.images;
-    images.splice(index, 1);
-    this.setData({
-      images
-    });
-  },
-
-  // 提交预约
-  submitInstall() {
-    const { deviceType, model, name, contact, address, installDate } = this.data;
-    
-    if (!deviceType) {
-      this.showToast('请选择设备类型');
-      return;
-    }
-    
-    if (!model) {
-      this.showToast('请输入产品型号');
-      return;
-    }
-    
-    if (!name) {
-      this.showToast('请输入联系人姓名');
-      return;
-    }
-    
-    if (!contact) {
-      this.showToast('请输入手机号码');
-      return;
-    }
-    
-    if (!/^1\d{10}$/.test(contact)) {
-      this.showToast('手机号码格式不正确');
-      return;
-    }
-    
-    if (!address) {
-      this.showToast('请输入安装地址');
-      return;
-    }
-    
-    if (!installDate) {
-      this.showToast('请选择期望安装日期');
-      return;
-    }
-    
-    // 这里可以调用云函数或者API提交数据
-    wx.showLoading({
-      title: '提交中...',
-    });
-    
-    // 模拟提交
+  onHide: function() {},
+  onUnload: function() {},
+  onPullDownRefresh: function() {
+    // 下拉刷新，重新获取工单数据
     setTimeout(() => {
-      wx.hideLoading();
-      wx.showToast({
-        title: '预约成功',
-        icon: 'success',
-        duration: 2000,
-        success: () => {
-          // 提交成功后跳转回首页
-          setTimeout(() => {
-            wx.switchTab({
-              url: '/pages/index/index'
-            });
-          }, 2000);
-        }
-      });
-    }, 1500);
+      wx.stopPullDownRefresh();
+    }, 1000);
   },
-  
-  // 显示提示信息
-  showToast(message) {
-    wx.showToast({
-      title: message,
-      icon: 'none',
-      duration: 2000
-    });
+  onReachBottom: function() {
+    // 上拉加载更多工单
+  },
+  onShareAppMessage: function() {
+    return {
+      title: '志成电器工单管理',
+      path: '/pages/maintenance/workorder/index'
+    };
   }
 }); 

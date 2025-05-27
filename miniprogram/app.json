@@ -39,6 +39,12 @@
         "selectedIconPath": "images/icons/examples-active.png"
       },
       {
+        "pagePath": "pages/maintenance/workorder/index",
+        "text": "工单",
+        "iconPath": "images/icons/business.png",
+        "selectedIconPath": "images/icons/business-active.png"
+      },
+      {
         "pagePath": "pages/examples/index",
         "text": "线下店",
         "iconPath": "images/icons/home.png",
