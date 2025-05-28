@@ -5,6 +5,7 @@
     "pages/user-center/index",
     "pages/maintenance/fault/index",
     "pages/maintenance/workorder/index",
+    "pages/maintenance/workorder/create/index",
     "pages/maintenance/inventory/index",
     "pages/maintenance/statistics/index",
     "pages/examples-new/index",

@@ -83,7 +83,7 @@ Page({
         url = '/pages/maintenance/fault/index';
         break;
       case 'workorder':
-        url = '/pages/maintenance/workorder/index';
+        url = '/pages/maintenance/workorder/create/index';
         break;
       case 'inventory':
         url = '/pages/maintenance/inventory/index';

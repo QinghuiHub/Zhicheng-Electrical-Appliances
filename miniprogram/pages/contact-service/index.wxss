@@ -1,0 +1,99 @@
+/* pages/contact-service/index.wxss */
+.container {
+  padding: 30rpx;
+  background-color: #f6f6f6;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.content {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+}
+
+.service-image {
+  width: 100%;
+  height: 400rpx;
+  margin-bottom: 40rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.service-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-info {
+  margin-bottom: 40rpx;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item .icon {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+
+.info-item .text {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.info-item .value {
+  font-size: 28rpx;
+  color: #666;
+  max-width: 400rpx;
+  text-align: right;
+}
+
+.service-note {
+  background-color: #f8f8f8;
+  border-radius: 12rpx;
+  padding: 30rpx;
+}
+
+.note-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.note-item {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+  line-height: 1.5;
+}
+
+.note-item:last-child {
+  margin-bottom: 0;
+} 

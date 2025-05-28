@@ -1,2 +1,41 @@
 <!--pages/contact-service/index.wxml-->
-<text>pages/contact-service/index.wxml</text>
+<view class="container">
+  <view class="header">
+    <view class="title">联系客服</view>
+    <view class="subtitle">专业服务，随时在线</view>
+  </view>
+
+  <view class="content">
+    <view class="service-image">
+      <image src="cloud://cloud1-9guuoeyie2fd8916.636c-cloud1-9guuoeyie2fd8916-1360998817/个人中心/联系客服/c64936ea3216050c85ffc31c833b9c87.png" mode="aspectFit" show-menu-by-longpress="true"></image>
+    </view>
+
+    <view class="contact-info">
+      <view class="info-item" bindtap="makePhoneCall">
+        <view class="icon">📞</view>
+        <view class="text">电话咨询</view>
+        <view class="value">{{phoneNumber}}</view>
+      </view>
+
+      <view class="info-item" bindtap="openLocation">
+        <view class="icon">📍</view>
+        <view class="text">门店地址</view>
+        <view class="value">{{location.address}}</view>
+      </view>
+
+      <view class="info-item">
+        <view class="icon">⏰</view>
+        <view class="text">服务时间</view>
+        <view class="value">周一至周日 9:00-17:00</view>
+      </view>
+    </view>
+
+    <view class="service-note">
+      <view class="note-title">温馨提示</view>
+      <view class="note-item">1. 客服电话：{{phoneNumber}}</view>
+      <view class="note-item">2. 服务时间：周一至周日 9:00-17:00</view>
+      <view class="note-item">3. 如遇电话占线，请稍后再拨</view>
+      <view class="note-item">4. 紧急情况可直接拨打客服电话</view>
+    </view>
+  </view>
+</view>

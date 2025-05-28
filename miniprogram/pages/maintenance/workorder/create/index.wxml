@@ -1,0 +1,76 @@
+<!--pages/maintenance/workorder/create/index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="title">预约安装</view>
+    <view class="subtitle">专业安装，品质保障</view>
+  </view>
+  
+  <view class="form-container">
+    <view class="form-group">
+      <view class="form-title">基本信息</view>
+      
+      <view class="form-item">
+        <view class="label required">设备类型</view>
+        <picker mode="selector" range="{{deviceTypes}}" bindchange="onDeviceTypeChange">
+          <view class="picker-value">{{deviceType || '请选择设备类型'}}</view>
+        </picker>
+      </view>
+      
+      <view class="form-item">
+        <view class="label required">品牌型号</view>
+        <input class="input" placeholder="请输入设备品牌和型号" bindinput="onModelInput" />
+      </view>
+      
+      <view class="form-item">
+        <view class="label">安装说明</view>
+        <textarea class="textarea" placeholder="请简要描述安装需求，方便师傅提前了解情况..." bindinput="onDescInput" maxlength="200"></textarea>
+      </view>
+    </view>
+    
+    <view class="form-group">
+      <view class="form-title">联系方式</view>
+      
+      <view class="form-item">
+        <view class="label required">联系人</view>
+        <input class="input" placeholder="请输入您的姓名" bindinput="onNameInput" />
+      </view>
+      
+      <view class="form-item">
+        <view class="label required">手机号码</view>
+        <input class="input" type="number" placeholder="请输入您的手机号码" bindinput="onContactInput" />
+      </view>
+      
+      <view class="form-item">
+        <view class="label required">安装地址</view>
+        <input class="input" placeholder="请输入详细的安装地址" bindinput="onAddressInput" />
+      </view>
+    </view>
+    
+    <view class="form-group">
+      <view class="form-title">预约时间</view>
+      
+      <view class="form-item">
+        <view class="label required">期望安装日期</view>
+        <picker mode="date" start="{{today}}" end="{{endDate}}" bindchange="onDateChange">
+          <view class="picker-value">{{serviceDate || '请选择日期'}}</view>
+        </picker>
+      </view>
+      
+      <view class="form-item">
+        <view class="label required">期望时间段</view>
+        <picker mode="selector" range="{{timeSlots}}" bindchange="onTimeSlotChange">
+          <view class="picker-value">{{timeSlot || '请选择时间段'}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  
+  <view class="service-note">
+    <view class="note-title">服务说明</view>
+    <view class="note-item">1. 提交信息后，客服将在30分钟内与您联系确认</view>
+    <view class="note-item">2. 安装服务费用将根据具体设备类型和安装难度确定</view>
+    <view class="note-item">3. 安装服务质保期为90天</view>
+  </view>
+  
+  <button class="submit-btn" bindtap="submitInstallation">立即预约</button>
+</view> 
