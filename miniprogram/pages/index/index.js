@@ -6,12 +6,12 @@ Page({
     ],
     imagesLoaded: [false, false],
     currentSwiperIndex: 0,
-    phoneNumber: '13330130661', // 客服电话
+    phoneNumber: '18970736335', // 客服电话
     location: {
       latitude: 24.742,
       longitude: 114.528,
       name: '志成电器总店',
-      address: '江西省赣州市全南县',
+      address: '江西省赣州市全南县S454社迳初级中学东侧约210米',
     }
   },
   onLoad: function(options) {
