@@ -1,4 +1,6 @@
 // pages/my-address/index.js
+const app = getApp()
+
 Page({
   /**
    * 页面的初始数据
@@ -64,30 +66,45 @@ Page({
   },
 
   // 加载地址列表
-  loadAddressList() {
-    const db = wx.cloud.database();
-    db.collection('addresses').where({
-      _openid: '{openid}' // 这里会自动替换为当前用户的openid
-    }).get().then(res => {
+  async loadAddressList() {
+    try {
+      const db = wx.cloud.database();
+      const res = await db.collection('addresses')
+        .where({
+          _openid: app.globalData.openid
+        })
+        .get();
+      
       this.setData({
-        addressList: res.data
+        addressList: res.data || []
       });
-    }).catch(err => {
-      console.error('获取地址列表失败：', err);
-      wx.showToast({
-        title: '获取地址列表失败',
-        icon: 'none'
+    } catch (err) {
+      console.error('加载地址列表失败：', err);
+      // 如果是集合不存在的错误，提示用户稍后再试
+      if (err.errCode === -502005) {
+        wx.showToast({
+          title: '系统初始化中，请稍后再试',
+          icon: 'none',
+          duration: 2000
+        });
+      } else {
+        wx.showToast({
+          title: '加载失败，请重试',
+          icon: 'none'
+        });
+      }
+      this.setData({
+        addressList: []
       });
-    });
+    }
   },
 
   // 选择地址
-  selectAddress(e) {
+  async selectAddress(e) {
     const id = e.currentTarget.dataset.id;
-    const address = this.data.addressList.find(item => item.id === id);
+    const address = this.data.addressList.find(item => item._id === id);
     if (address) {
-      // 将选中的地址存储到全局数据或缓存中
-      getApp().globalData.selectedAddress = address;
+      app.globalData.selectedAddress = address;
       wx.navigateBack();
     }
   },
@@ -101,30 +118,32 @@ Page({
   },
 
   // 删除地址
-  deleteAddress(e) {
+  async deleteAddress(e) {
     const id = e.currentTarget.dataset.id;
-    wx.showModal({
-      title: '提示',
-      content: '确定要删除这个地址吗？',
-      success: res => {
-        if (res.confirm) {
-          const db = wx.cloud.database();
-          db.collection('addresses').doc(id).remove().then(() => {
-            wx.showToast({
-              title: '删除成功',
-              icon: 'success'
-            });
-            this.loadAddressList();
-          }).catch(err => {
-            console.error('删除地址失败：', err);
-            wx.showToast({
-              title: '删除失败',
-              icon: 'none'
-            });
-          });
-        }
+    try {
+      const res = await wx.showModal({
+        title: '提示',
+        content: '确定要删除这个地址吗？'
+      });
+      
+      if (res.confirm) {
+        const db = wx.cloud.database();
+        await db.collection('addresses').doc(id).remove();
+        
+        wx.showToast({
+          title: '删除成功',
+          icon: 'success'
+        });
+        
+        this.loadAddressList();
       }
-    });
+    } catch (err) {
+      console.error('删除地址失败：', err);
+      wx.showToast({
+        title: '删除失败',
+        icon: 'none'
+      });
+    }
   },
 
   // 新增地址

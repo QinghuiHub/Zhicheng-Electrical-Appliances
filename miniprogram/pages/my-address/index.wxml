@@ -1,8 +1,8 @@
 <!--pages/my-address/index.wxml-->
 <view class="container">
   <view class="address-list">
-    <view class="address-item" wx:for="{{addressList}}" wx:key="id">
-      <view class="address-content" bindtap="selectAddress" data-id="{{item.id}}">
+    <view class="address-item" wx:for="{{addressList}}" wx:key="_id">
+      <view class="address-content" bindtap="selectAddress" data-id="{{item._id}}">
         <view class="address-info">
           <view class="contact-info">
             <text class="name">{{item.name}}</text>
@@ -12,11 +12,11 @@
           <view class="address-detail">{{item.province}}{{item.city}}{{item.district}}{{item.address}}</view>
         </view>
         <view class="address-actions">
-          <view class="action-btn edit" catchtap="editAddress" data-id="{{item.id}}">
+          <view class="action-btn edit" catchtap="editAddress" data-id="{{item._id}}">
             <text class="icon">✏️</text>
             <text>编辑</text>
           </view>
-          <view class="action-btn delete" catchtap="deleteAddress" data-id="{{item.id}}">
+          <view class="action-btn delete" catchtap="deleteAddress" data-id="{{item._id}}">
             <text class="icon">🗑️</text>
             <text>删除</text>
           </view>
