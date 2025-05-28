@@ -1,0 +1,33 @@
+<!--pages/my-address/edit/index.wxml-->
+<view class="container">
+  <view class="form-container">
+    <view class="form-item">
+      <view class="label required">联系人</view>
+      <input class="input" placeholder="请输入联系人姓名" value="{{name}}" bindinput="onNameInput" />
+    </view>
+
+    <view class="form-item">
+      <view class="label required">手机号码</view>
+      <input class="input" type="number" placeholder="请输入手机号码" value="{{phone}}" bindinput="onPhoneInput" />
+    </view>
+
+    <view class="form-item">
+      <view class="label required">所在地区</view>
+      <picker mode="region" value="{{region}}" bindchange="onRegionChange">
+        <view class="picker-value">{{region[0]}} {{region[1]}} {{region[2]}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <view class="label required">详细地址</view>
+      <textarea class="textarea" placeholder="请输入详细地址，如街道、门牌号等" value="{{address}}" bindinput="onAddressInput"></textarea>
+    </view>
+
+    <view class="form-item">
+      <view class="label">设为默认地址</view>
+      <switch checked="{{isDefault}}" bindchange="onDefaultChange" color="#07C160" />
+    </view>
+  </view>
+
+  <view class="submit-btn" bindtap="saveAddress">保存</view>
+</view> 

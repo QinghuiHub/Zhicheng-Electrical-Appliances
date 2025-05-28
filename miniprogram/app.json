@@ -17,6 +17,7 @@
     "pages/about-us/help/index",
     "pages/my-orders/index",
     "pages/my-address/index",
+    "pages/my-address/edit/index",
     "pages/contact-service/index"
   ],
   "window": {

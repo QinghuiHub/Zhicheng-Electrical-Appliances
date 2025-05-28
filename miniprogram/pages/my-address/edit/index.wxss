@@ -1,0 +1,68 @@
+/* pages/my-address/edit/index.wxss */
+.container {
+  min-height: 100vh;
+  background-color: #f6f6f6;
+  padding-bottom: 120rpx;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20rpx;
+}
+
+.form-item {
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.form-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.label.required::before {
+  content: '*';
+  color: #ff4d4f;
+  margin-right: 8rpx;
+}
+
+.input {
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.picker-value {
+  font-size: 28rpx;
+  color: #333;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.textarea {
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  height: 160rpx;
+  line-height: 1.4;
+}
+
+.submit-btn {
+  position: fixed;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #07C160;
+  color: #fff;
+  font-size: 32rpx;
+  padding: 20rpx 60rpx;
+  border-radius: 40rpx;
+  box-shadow: 0 4rpx 12rpx rgba(7, 193, 96, 0.3);
+} 
